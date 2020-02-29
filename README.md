@@ -23,7 +23,7 @@ Download config.yaml and MMS_data_downloader.exe
        It can handle several requests at once by writing them below eachother.
 
 Request syntax:  
-  Replace values in paranthesis.
+  Replace values in parenthesis.
 ```
   (name of request):
     file: (file)
