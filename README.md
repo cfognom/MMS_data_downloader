@@ -8,9 +8,9 @@ MMS_data_downloader can manage you local MMS database by:
     *A file is regarded as 'damaged' if it's up-to-date but there is a size mismatch between it and the file on the server
 
 ## Usage
-Download config.yaml and MMS_data_downloader.exe
+1. Clone or download the repository.
 
-1. Open config.yaml and provide the following:
+2. Open config.yaml and provide the following:
   
     1. dataRootPath: The path to the root location of your local MMS database.
     
@@ -51,7 +51,7 @@ Example request:
 ```
 
          
-2. Run 'MMS_data_downloader.exe'.
+3. Run 'MMS_data_downloader.exe'.
   
     1. A summary of what needs to be downloaded will be shown.
       
