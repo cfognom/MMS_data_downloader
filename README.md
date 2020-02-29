@@ -53,7 +53,7 @@ Example request:
          
 2. Run 'MMS_data_downloader.exe'.
   
-    1. 'MMS_data_downloader.exe' will show a summary of what needs to be downloaded.
+    1. A summary of what needs to be downloaded will be shown.
       
     2. If any outdated files were found you will be promted to delete them.
       
