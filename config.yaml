@@ -1,0 +1,42 @@
+settings:
+  dataRootPath: C:\Users\...
+  url: https://lasp.colorado.edu/mms/sdc/public/files/api/v1/{}/science # {} is replaced by 'file_info' or 'download' automatically
+  size_chunk: 65536 # Download chunk size in bytes used by each connection.
+  n_concurrentConnections: 250 # Maximum number of concurrent connections. Increasing this will increase download rate but might put more stress on the CPU.
+  # Each connection represents about 0.4 Mbps, so if you have a 100 Mbps connection 250 concurrent connections is recommended if you want to maximize download rate.
+  # However, dowloading too fast might lead to RAM overflow as there is only one process writing the data to disk.
+  # Keep an eye out for this if you are dowloading very large quantities (~ 10 GB or more).
+
+requests:
+  fpi:
+    file:
+    sc_id: mms1
+    instrument_id: fpi
+    data_rate_mode: fast
+    data_level: l2
+    descriptor: des-partmoms
+    version:
+    start_date: 2017-01-01
+    end_date: 2017-01-02
+
+  fgm:
+    file:
+    sc_id: mms1
+    instrument_id: fgm
+    data_rate_mode: srvy
+    data_level: l2
+    descriptor:
+    version:
+    start_date: 2017-01-01
+    end_date: 2017-01-02
+
+  mec:
+    file:
+    sc_id: mms1
+    instrument_id: mec
+    data_rate_mode: srvy
+    data_level: l2
+    descriptor: ephts04d
+    version:
+    start_date: 2017-01-01
+    end_date: 2017-01-02
