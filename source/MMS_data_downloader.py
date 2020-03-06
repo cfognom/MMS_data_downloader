@@ -10,6 +10,12 @@ def processRequests(reqs):
     allDamagedFiles = []
     allUpToDateFiles = []
     for req, query in reqs.items():
+        if query['sc_id'] == None:
+            query['sc_id'] = default_sc_id
+        if query['start_date'] == None:
+            query['start_date'] = default_start_date
+        if query['end_date'] == None:
+            query['end_date'] = default_end_date
         printRequest(req, query)
         with requests.get(url.format('file_info'), params=query) as response:
             code = response.status_code
@@ -247,14 +253,18 @@ def loadConfig():
         conf = yaml.full_load(file)
         reqs = conf['requests']
         settings = conf['settings']
-    return (reqs, settings)
+        defaults = settings['defaults']
+    return (reqs, settings, defaults)
 
 if __name__ == "__main__":
-    (reqs, settings) = loadConfig()
+    (reqs, settings, defaults) = loadConfig()
     dataRootPath = settings['dataRootPath']
     url = settings['url']
     size_chunk = settings['size_chunk']
     n_concurrentConnections = settings['n_concurrentConnections']
+    default_sc_id = defaults['sc_id']
+    default_start_date = defaults['start_date']
+    default_end_date = defaults['end_date']
 
     allDownloadFiles = processRequests(reqs)
     startDownload(allDownloadFiles)
