@@ -6,6 +6,12 @@ settings:
   # Each connection represents about 0.4 Mbps, so if you have a 100 Mbps connection 250 concurrent connections is recommended if you want to maximize download rate.
   # However, dowloading too fast might lead to RAM overflow as there is only one process writing the data to disk.
   # Keep an eye out for this if you are dowloading very large quantities (~ 10 GB or more).
+  
+  defaults:
+    # Defaults are applied if they are not specified by the request. Useful, for example, if you want the dates to be the same for all requests.
+    sc_id:
+    start_date:
+    end_date:
 
 requests:
   fpi:
