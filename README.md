@@ -16,7 +16,7 @@ MMS_data_downloader can manage you local MMS database by:
     
     2. n_concurrentConnections: How many concurrent connections to use.  
        More means faster download rate but more CPU and RAM stress.  
-       One connection equals about 0.4 Mbps.
+       (For me one connection is about 0.4 Mbps)
          
     3. Under 'requests' specify your requests using the syntax shown below.  
        Information about the request parameters can be found here: https://lasp.colorado.edu/mms/sdc/public/about/how-to/  
